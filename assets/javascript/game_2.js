@@ -11,7 +11,6 @@ var losses = 0;
 var wins = 0;
 var correctWord; 
 
-
 var wordList = ["MERCURY",
                 "VENUS", 
                 "EARTH", 
@@ -22,11 +21,20 @@ var wordList = ["MERCURY",
                 "NEPTUNE"
                 ]; 
 
+function launch(){
+    var instructions = document.getElementById("instructions"); 
+    if (instructions.style.display === "none") {
+        instructions.style.display = "block";
+      } else {
+        instructions.style.display = "none";
+      }
+}
+
 // Starts game
 function start() {
-        letters = [];                    //correctly guessed letters
-        wrongLetters = [];              //incorrectly guessed letters
-    word = wordList[Math.floor(Math.random() * wordList.length)];
+    letters = [];                    //correctly guessed letters
+    wrongLetters = [];              //incorrectly guessed letters
+    word = wordList[Math.floor(Math.random() * wordList.length)]; //randomly selects word
     correctWord = word.split(""); 
     for (i = 0; i < word.length; i++) {
         letters[i] = "_";    
@@ -92,6 +100,5 @@ function checkLetter() {
     }
     }
 }
-start();
 checkLetter();
 
