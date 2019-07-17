@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Word Guess Game </title>
-         <link rel="style/sheet" type="text/css" href="assets/css/style.css">
+        <title>Word Guess Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway:100&display=swap" rel="stylesheet">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
     <body>
-           <!--INTRO PAGE -->
-        <div id="introPage">
-            <div id="introText">
-                <h1>Word Guess Game</h1>
-                <p>Pete can't remember which planet he is supposed to be traveling to. Help him get to his destination safely by guessing the correct planet!</p>
-                <p>Select the launch button to begin</p>
-                <button>
-                    <a href="active_game.html">Launch</a>
-                </button>
 
+        <header class="align-items-center">
+            <div class="container1">
+                <div class="d-flex flex-column flex-md-row align-items-center">
+                    <h4 class="my-0 mr-md-auto">Jessie Sholler</h4>
+                        <nav class="my-2 my-md-0 mr-md-0">
+                                <a href="https://jae-s.github.io/Bootstrap-Portfolio/" target="_blank">About</a>
+                                <a href="https://jae-s.github.io/Bootstrap-Portfolio/portfolio.html" target="_blank">Portfolio</a>
+                                <a href="https://jae-s.github.io/Bootstrap-Portfolio/contact.html" target="_blank">Contact</a>
+                        </nav>
+                </div>
+            </div>           
+        </header> 
 
-        
+          <!--INTRO PAGE-->
+        <main  class="background"> 
+            <div class="container2">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-">
+                        <img src="assets/images/astronautinhole.gif" class="img-fluid pete">
+                    </div>
+                    <div class="col-lg-6 col-sm-">
+                        <div id="introText">
+                            <h1>Word Guess Game</h1>
+                            <p>Pete is lost and can't remember which planet he is traveling to. Help him get to his destination safely by guessing the correct planet!</p>
+                            <p>Press the launch button to begin</p>
+                        
+                        <button>
+                            <a href="active_game.html">Launch</a>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="align-items-center text-center sticky-bottom"> 
+            <small>&copycopywrite</small>
+        </footer>
 
         <script type="text/javascript" src="assets/javascript/game.js"></script>
     </body>
