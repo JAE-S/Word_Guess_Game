@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Word Guess Game </title>
+        <link rel="style/sheet" type="text/css" href="assets/css/style.css">
+        <script type="text/javascript" src="assets/javascript/game_2.js"></script>
+       
+    </head>
+    <body>
+           <!--INTRO PAGE -->
+        <div id="gamePage">
+            <div class="container"></div>
+            <h1>Hangman!</h1>
+            <span>Just start writing to play.</span>
+              
+            <p><span id="answer"></span></p>
+            <p id="remainingGuesses"></p>
+            <p id="wrongGuesses"></p>
+            <p>Wins: <span id="wins"></span></p>
+            <p>Losses: <span id="losses"></span></p>
+        </div>
+    <script>
+        start();
+        checkLetter();
+    </script>
+    <script type="text/javascript" src="assets/javascript/game_2.js"></script>
+
+    </body>
+</html>
+
+
