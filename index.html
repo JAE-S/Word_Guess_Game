@@ -24,33 +24,61 @@
             </div>           
         </header> 
 
-          <!--INTRO PAGE-->
+        <!--GAME CONTENT-->
         <main  class="background"> 
             <div class="container2">
+
+        <!--INTRO PAGE CONTENT-->
+                <section class="introPage">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 col-sm-">
+
+                    <div class="col-lg-6 col-sm-"><!--Left image column-->
                         <img src="assets/images/astronautinhole.gif" class="img-fluid pete">
                     </div>
-                    <div class="col-lg-6 col-sm-">
+
+                    <div class="col-lg-6 col-sm-"><!--Right text column-->
                         <div id="introText">
                             <h1>Word Guess Game</h1>
                             <p>Pete is lost and can't remember which planet he is traveling to. Help him get to his destination safely by guessing the correct planet!</p>
                             <p>Press the launch button to begin</p>
                         
-                        <button>
-                            <a href="active_game.html">Launch</a>
+                        <button id="button-launch" class="btn btn-dark"><span>Launch</span><!--Launch Game-->
                         </button>
+
                         </div>
                     </div>
                 </div>
-            </div>
+                </section>
+        <!--ACTIVE GAME CONTENT-->
+                <section class="gamePage">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-6 col-sm-"><!--Left image column-->
+                        <img src="assets/images/astronautinhole.gif" class="img-fluid pete">
+                    </div>
+                    
+                    <div class="col-lg-6 col-sm-"><!--Right text column-->
+                        <h1>Which Planet am I traveling to?</h1>
+                  
+                        <p><span id="answer"></span></p>
+                        <p id="remainingGuesses"></p>
+                        <p id="wrongGuesses"></p>
+                        <p>Wins: <span id="wins"></span></p>
+                        <p>Losses: <span id="losses"></span></p>
+                    </div>
+                </div>
+                </section>
+                <script>
+                start();
+                checkLetter();
+                </script>
         </main>
 
         <footer class="align-items-center text-center sticky-bottom"> 
             <small>&copycopywrite</small>
         </footer>
 
-        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <script type="text/javascript" src="assets/javascript/game_2.js"></script>
     </body>
 </html>
 
