@@ -1,12 +1,6 @@
 /**
- * Bootstrap Portfolio Activity
- **/
-
-/*
-  ========================================
-  Layout
-  ========================================
-*/
+Word Guess Game
+**/
 
 * {
     box-sizing: border-box;
@@ -14,10 +8,11 @@
   *, *::after, *::before {
     box-sizing: border-box;
   }
+
 /*
-  ========================================
-  Header - Nav Bar
-  ========================================
+========================================
+Header - Nav Bar
+========================================
 */
 .container1 {
   max-width: 960px;
@@ -33,7 +28,6 @@ header {
   z-index: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 nav a {
   color: black;
@@ -71,6 +65,7 @@ body {
     width: 100%;
     padding: 40px; 
   }
+
   .container2 {
     max-width: 960px;
     z-index: 1;
@@ -80,13 +75,10 @@ body {
     overflow: auto;
   }
 
-/* .background {
-    background-image: url("../images/astronautinhole.gif");
-} */
 /*
-  ========================================
-  footer
-  ========================================
+========================================
+footer
+========================================
 */
 
 footer {
@@ -99,11 +91,11 @@ footer {
     padding-bottom: 10px;
   }
   
-  /*
-    ========================================
-    Typography
-    ========================================
-  */
+/*
+========================================
+Typography
+========================================
+*/
   h1 {
     font-size: 2rem;
     text-decoration: none;
@@ -126,15 +118,26 @@ footer {
     font-family: 'Raleway', sans-serif;
     color: #777777;
   }
+
   /*
-    ========================================
-    Start Page
-    ========================================
+  ========================================
+  Intro Page
+  ========================================
   */
  .pete {
-   width: 450px;
-   height: auto;
-   max-width: 100%;
+  width: 450px;
+  height: auto;
+  max-width: 100%;
+  min-height: 1px;
+ }
 
-   min-height: 1px;
+ .introPage h1, #launchedGame h1 {
+   font-family: 'Aldrich', sans-serif;;
+   text-align: center;
+   font-size: 2rem;
+ }
+ .introPage p, #launchedGame p {
+   font-family: 'Darker Grotesque', sans-serif;
+   font-size: 1.5rem; 
+   text-align: center;
  }

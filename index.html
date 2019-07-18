@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway:100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Aldrich|Darker+Grotesque&display=swap" rel="stylesheet">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
          <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -28,7 +29,7 @@
         <main  class="background"> 
             <div class="container2">
 
-        <!--INTRO PAGE CONTENT-->
+        <!--INSTRUCTIONS PAGE CONTENT-->
                 <section id="instructions">
                 <div class="row align-items-center">
 
@@ -37,7 +38,7 @@
                     </div>
 
                     <div class="col-lg-6 col-sm-"><!--Right text column-->
-                        <div>
+                        <div class="introPage text-center">
                             <h1>Word Guess Game</h1>
                             <p>Pete is lost and can't remember which planet he is traveling to. Help him get to his destination safely by guessing the correct planet!</p>
                             <p>Press the launch button to begin</p>
@@ -58,13 +59,23 @@
                     </div>
                     
                     <div class="col-lg-6 col-sm-"><!--Right text column-->
-                        <h1>What Planet am I traveling to?</h1>
-                  
-                        <p><span id="answer"></span></p>
-                        <p id="remainingGuesses"></p>
-                        <p id="wrongGuesses"></p>
-                        <p>Wins: <span id="wins"></span></p>
-                        <p>Losses: <span id="losses"></span></p>
+                            <h1>What Planet am I traveling to?</h1>
+                        <div>
+                            <p><b>Remaining Guesses: </b><span id="remainingGuesses">5</span></p>
+                            <p><span id="answer"></span></p>
+                            <p><b>So Far You've Guessed: </b></p>
+                            <p><span id="wrongGuesses"></span></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-">
+                                <p><b>Wins: </b><span id="wins"></span></p>
+                            </div>
+                            <div class="col-lg-6 col-sm-">
+                                <p><b>Losses: </b><span id="losses"></span></p>
+                            </div>
+                        </div>
+                        <button id="playAgain" class="btn btn-dark" onclick="playAgain()"><span>Play Again</span><!--Launch Game-->
+                        </button>
                     </div>
                 </div>
                 </section>
