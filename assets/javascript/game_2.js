@@ -11,8 +11,12 @@ var remainingGuesses = 5;          // Counts wrong guesses
 var losses = 0;
 var wins = 0;
 var correctWord; 
-var playAgain = document.getElementById("launchedGame");  // Selects instructions section
-launchedGame.style.display = "none";
+var play = document.getElementById("launchedGame");  // Hides the main game page until the game is won or lost
+play.style.display = "none"; 
+var restart = document.getElementById("restart"); // Hides restart button until the game is won or lost
+restart.style.display = "none";
+console.log(restart);
+
 
 var wordList = ["MERCURY",
                 "VENUS", 
@@ -24,10 +28,10 @@ var wordList = ["MERCURY",
                 "NEPTUNE"
                 ]; 
 
-// function playAgain(){   
+// function restart(){   
 //     playAgain.style.disply = "none"; // Selects instructions section
 //     remainingGuesses = 5;  
-//     correctLetters = [];                                                 // Resets correctly guessed letters
+//     correctLetters = [];                           // Resets correctly guessed letters
 //     wrongLetters = []; 
 // }
 
@@ -37,9 +41,8 @@ function launch(){          // When the launch button is clicked the instruction
         instructions.style.display = "block";                 
       } else {
         instructions.style.display = "none";
-      }                
-      playAgain.style.display = "none"; 
-      launchedGame.style.display = "block";
+      } 
+      play.style.display = "block";                
       correctLetters = [];                                                 // Resets correctly guessed letters
       wrongLetters = [];                                            // Resets incorrectly guessed letters
       word = wordList[Math.floor(Math.random() * wordList.length)]; // Randomly selects word
@@ -95,8 +98,8 @@ function checkLetter() {
                 losses++;
                 correctLetters[i] = "_";
                 document.getElementById("losses").innerHTML = losses;
-                playAgain.style.display = "block";
-                playAgain()
+                restart.style.display = "block";
+                // playAgain()
                 }
 
             // Wins
@@ -104,8 +107,8 @@ function checkLetter() {
                 wins++;
                 correctLetters[i] = "_";
                 document.getElementById("wins").innerHTML = wins;
-                playAgain.style.display = "block";
-                playAgain()
+                restart.style.display = "block";
+                // playAgain()
                 }
                 
         }
