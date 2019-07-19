@@ -141,10 +141,32 @@ Typography
    font-size: 1.5rem; 
    text-align: center;
  }
+ #button-launch {
+  background: black;
+  font-family: 'Aldrich', sans-serif;;
+}
+
+#button-launch a:hover {
+ background:white;
+ font-family: 'Aldrich', sans-serif;;
+}
 
    /*
   ========================================
   Game Page
   ========================================
   */
- 
+ #myVideo {
+  width: 450px;
+  height: auto;
+ }
+
+ #restart {
+   background: black;
+   font-family: 'Aldrich', sans-serif;;
+ }
+
+ #restart a:hover {
+  background:white;
+  font-family: 'Aldrich', sans-serif;;
+}
