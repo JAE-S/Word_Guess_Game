@@ -53,10 +53,15 @@ function launch(){
 }
 function restart(){
     if (gameOver === true){        // When the launch button is clicked the instructions will be hidden
-    restartButton.style.display = "block";                
+    restartButton.style.display = "none";                
     correctLetters = [];                                           // Resets correctly guessed letters
+    // document.getElementById("answer").innerHTML = (" ");
     wrongLetters = [];
-    remainingGuesses = 5;                                             // Resets incorrectly guessed letters
+    document.getElementById("wrongGuesses").innerHTML = (" ");
+    remainingGuesses = 5;     
+    document.getElementById("remainingGuesses").innerHTML = remainingGuesses; 
+    }
+    gameOver = false         
     word = wordList[Math.floor(Math.random() * wordList.length)]; // Randomly selects word
     correctWord = word.split("");                                 // Converts randomly selected word from an array to a string
       for (i = 0; i < word.length; i++) {
@@ -65,7 +70,7 @@ function restart(){
           document.getElementById("answer").innerHTML = correctLetters.join(" ");  // Joins guessed letters into a string
       }
     }
-}
+
 
 // checks if guessed letter is in the correctWord
 function checkLetter() {
@@ -101,7 +106,6 @@ function checkLetter() {
                 document.getElementById("losses").innerHTML = losses;
                 restartButton.style.display = "block";
                 gameOver = true
-                // restart();
                 }
                 console.log(correctWord.toString(), correctLetters.toString(), 'checking win state')
             // Wins
@@ -112,7 +116,6 @@ function checkLetter() {
                 console.log(correctWord);
                 console.log(correctLetters);
                 gameOver = true
-                // restart();
                 }
         
         }
