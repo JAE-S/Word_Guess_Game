@@ -29,8 +29,12 @@ var sound3 = document.getElementById("myAudio3");
 var sound4 = document.getElementById("myAudio4");
 var video = document.getElementById("myVideo");
 video.style.display = "none";
-var image1 = document.getElementById("image1");
-image1.style.display = "none";
+var imageNewGame = document.getElementById("image1");
+imageNewGame.style.display = "none";
+var imageYouWon = document.getElementById("image2");
+imageYouWon.style.display = "none";
+
+// image2
 
 // var image2 = document.getElementById("image2")
 // image2.style.display = "none";
@@ -64,7 +68,7 @@ function launch(){
       sound1.play();
       sound4.play();
       play.style.display = "block";  // Shows elements in the Launched game section
-      image1.style.display = "block";
+      imageNewGame.style.display = "block";
       word = wordList[Math.floor(Math.random() * wordList.length)]; // Randomly selects word
       correctWord = word.split("");                                 // Converts randomly selected word from an array to a string
       for (i = 0; i < word.length; i++) {
@@ -81,7 +85,7 @@ Restart Function for new games
 function restart(){
     if (gameOver === true){        // When game over is true -> reset the following:
     restartButton.style.display = "none";   // Hides the reset button 
-    video.style.display = "none";                 
+    video.style.display = "none";          
     correctLetters = [];                                           // Resets correctly guessed letters
     wrongLetters = [];
     document.getElementById("wrongGuesses").innerHTML = (" ");    // Resets incorrectly guessed letters in the html doc
@@ -137,7 +141,7 @@ function checkLetter() {
                 sound2.play();
                 document.getElementById("losses").innerHTML = losses;
                 video.style.display = "block";
-                image1.style.display = "none";
+                imageNewGame.style.display = "none";
                 video.play();
                 restartButton.style.display= "block"; 
                 gameOver = true;
@@ -149,6 +153,8 @@ function checkLetter() {
                 sound4.pause();
                 sound3.play();
                 document.getElementById("wins").innerHTML = wins;
+                imageYouWon.style.display = "block";
+                imageNewGame.style.display = "none";
                 restartButton.style.display = "block";
                 console.log(correctWord);
                 console.log(correctLetters);
