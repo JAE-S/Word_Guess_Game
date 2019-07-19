@@ -44,6 +44,9 @@
                             <p>Pete is lost and can't remember which planet he is traveling to. Help him get to his destination safely by guessing the correct planet!</p>
                             <p>Press the launch button to begin</p>
                         
+                        <audio id="myAudio">
+                        <source src="assets/sound_effects/new_game.mp3" type="audio/mpeg">
+                        </audio>
                         <button id="button-launch" class="btn btn-dark" onclick="launch()"><span>Launch</span><!--Launch Game-->
                         </button>
                         </div>
@@ -55,7 +58,7 @@
                 <div class="row align-items-center text-center">
                     
                     <div class="col-lg-6 col-sm-"><!--Left image column-->
-                        <img src="assets/images/astronautinhole.gif" class="img-fluid pete">
+                        <img src="assets/images/astronautinahole.svg" class="img-fluid pete">
                     </div>
                     
                     <div class="col-lg-6 col-sm-"><!--Right text column-->
@@ -69,13 +72,22 @@
                         <div class="row">
                             <div class="col-lg-6 col-sm-">
                                 <p><b>Wins: </b><span id="wins"></span></p>
+                            <audio id="myAudio3">
+                                <source src="assets/sound_effects/game_won.mp3" type="audio/mpeg">
+                            </audio>
                             </div>
                             <div class="col-lg-6 col-sm-">
                                 <p><b>Losses: </b><span id="losses"></span></p>
+                                <audio id="myAudio2">
+                                    <source src="assets/sound_effects/game_over.mp3" type="audio/mpeg">
+                                </audio>
                             </div>
                         </div>
                         <button id="restart" class="btn btn-dark btn-block" onclick="restart()">Play Again</button>
                     </div>
+                    <audio id="myAudio4" loop>
+                            <source src="assets/sound_effects/lost_in_space.mp3" type="audio/mpeg">
+                        </audio>
                 </div>
             </section>
         </main>
