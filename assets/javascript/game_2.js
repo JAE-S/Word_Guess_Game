@@ -93,6 +93,8 @@ function restart(){
     document.getElementById("remainingGuesses").innerHTML = remainingGuesses;  // Resets incorrectly guessed letters in the html doc
     }
     gameOver = false 
+    imageNewGame.style.display = "block";
+    imageYouWon.style.display = "none";
     sound4.play();                                                 // Alerts that a new game has started 
     word = wordList[Math.floor(Math.random() * wordList.length)]; // Randomly selects word
     correctWord = word.split("");                                 // Converts randomly selected word from an array to a string
