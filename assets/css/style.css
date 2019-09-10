@@ -14,6 +14,7 @@ Word Guess Game
 Header - Nav Bar
 ========================================
 */
+
 .container1 {
   max-width: 960px;
   margin: 0 auto;
@@ -51,6 +52,7 @@ nav a:hover {
   Main
   ========================================
 */
+
 body {
   display: flex;
   margin: 0 auto;
@@ -96,6 +98,7 @@ footer {
 Typography
 ========================================
 */
+
   h1 {
     font-size: 2rem;
     text-decoration: none;
@@ -169,4 +172,13 @@ Typography
  #restart a:hover {
   background:white;
   font-family: 'Aldrich', sans-serif;;
+}
+
+.letters {
+  border-radius: 50%;
+  height: 30px; 
+  width: 30px; 
+  background-color: black; 
+  color: white; 
+
 }

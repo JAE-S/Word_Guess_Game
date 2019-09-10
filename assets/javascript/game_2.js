@@ -1,3 +1,5 @@
+
+
 /*
 ========================================
 Global Variables
@@ -52,7 +54,11 @@ var wordList = ["MERCURY",
                 "URANUS", 
                 "NEPTUNE"
                 ]; 
-/*
+
+var keyboard = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var letters = keyboard.splice(""); 
+console.log(letters);
+/* 
 ========================================
 Launch function for Intro Page
 ========================================
@@ -109,7 +115,7 @@ function restart(){
 Check Letter function 
 ========================================
 */
-function checkLetter() {
+
     document.onkeyup = function(event) {
         console.log('gameOver', gameOver)
         if (gameOver) {
@@ -125,7 +131,11 @@ function checkLetter() {
                     console.log(correctLetters);
                 }
             }
-            
+        checkLetter();
+    }
+
+
+    function checkLetter() {    
         // Forms wrongLetters string
         if (correctLetters.indexOf(guess) === -1 && wrongLetters.indexOf(guess) < 0) {
             wrongLetters.push(guess);
@@ -163,7 +173,29 @@ function checkLetter() {
                 gameOver = true;
                 }
         }
+  
+
+
+ 
+    for (var i = 0; i < letters.length; i++){
+        var letterButtons = $('<button>'); 
+        letterButtons.append(letters[i] + " ")
+        letterButtons.addClass('letters');
+        letterButtons.attr('value', i)
+        $('#keyBoard').append(letterButtons); 
     }
 
-checkLetter();
+$(document).on("click", ".letters", function(){
+   console.log($(this).val());
+      letterVal = $(this).val();
+      console.log (letterVal);
+
+    //   for (var i = 0; i < letters.length; i++){
+          if (letterVal === str.indexOf(letters)) {
+            console.log(letters[i]);
+          }
+     
+    //   }
+    //   checkLetter();
+});
 
