@@ -101,7 +101,8 @@ function restart(){
     gameOver = false 
     imageNewGame.style.display = "block";
     imageYouWon.style.display = "none";
-    sound4.play();                                                 // Alerts that a new game has started 
+    sound4.play();                 
+                                    // Alerts that a new game has started 
     word = wordList[Math.floor(Math.random() * wordList.length)]; // Randomly selects word
     correctWord = word.split("");                                 // Converts randomly selected word from an array to a string
       for (i = 0; i < word.length; i++) {
@@ -124,7 +125,8 @@ Check Letter function
         if (!(event.which <= 90 && event.which >= 65))  // Only letters are valid guesses
         return;
         guess = event.key.toUpperCase();                // Changes all key inputs to uppercase
-            for (i = 0; i < word.length; i++) {
+        guess.attr('value', " ");
+        for (i = 0; i < word.length; i++) {
                 if (guess === word[i]) {
                     correctLetters[i] = guess;
                     document.getElementById("answer").innerHTML = correctLetters.join(" ");
@@ -174,28 +176,43 @@ Check Letter function
                 }
         }
   
+  // create alphabet ul
+  var buttons = function () {
+    myButtons = document.getElementById('buttons');
+    letters = document.createElement('ul');
 
-
- 
+    for (var i = 0; i < keyboard.length; i++) {
+      letters.id = 'alphabet';
+      list = document.createElement('li');
+      list.id = 'letter';
+      list.innerHTML = keyboard[i];
+      checkLetter();
+      myButtons.appendChild(letters);
+      letters.appendChild(list);
+    }
+  }
+    
+  
     for (var i = 0; i < letters.length; i++){
         var letterButtons = $('<button>'); 
         letterButtons.append(letters[i] + " ")
         letterButtons.addClass('letters');
-        letterButtons.attr('value', i)
+        letterButtons.attr('value', letters[i])
         $('#keyBoard').append(letterButtons); 
     }
 
 $(document).on("click", ".letters", function(){
-   console.log($(this).val());
-      letterVal = $(this).val();
-      console.log (letterVal);
+//    console.log($(this).val());
+     guess = $(this).val();
+    //   console.log (letterVal);
 
-    //   for (var i = 0; i < letters.length; i++){
-          if (letterVal === str.indexOf(letters)) {
-            console.log(letters[i]);
-          }
-     
-    //   }
-    //   checkLetter();
+      for (i = 0; i < word.length; i++) {
+        if (guess === word[i]) {
+            correctLetters[i] = guess;
+            document.getElementById("answer").innerHTML = correctLetters.join(" ");
+            console.log(correctLetters);
+        }
+    }
+checkLetter();
 });
 
